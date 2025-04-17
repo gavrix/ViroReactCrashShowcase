@@ -24,6 +24,7 @@ import {
   LearnMoreLinks,
   ReloadInstructions,
 } from 'react-native/Libraries/NewAppScreen';
+import { SimpleARScreen } from './ARScene';
 
 type SectionProps = PropsWithChildren<{
   title: string;
@@ -68,7 +69,8 @@ function App(): React.JSX.Element {
         barStyle={isDarkMode ? 'light-content' : 'dark-content'}
         backgroundColor={backgroundStyle.backgroundColor}
       />
-      <ScrollView
+      <SimpleARScreen />
+      {/* <ScrollView
         contentInsetAdjustmentBehavior="automatic"
         style={backgroundStyle}>
         <Header />
@@ -91,7 +93,7 @@ function App(): React.JSX.Element {
           </Section>
           <LearnMoreLinks />
         </View>
-      </ScrollView>
+      </ScrollView> */}
     </SafeAreaView>
   );
 }
